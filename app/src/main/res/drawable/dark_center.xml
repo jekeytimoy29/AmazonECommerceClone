@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dark_center.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="90"
+        android:startColor="@color/header_color"
+        android:centerColor="@color/border_color"
+        android:endColor="@color/header_color"
+        android:type="linear" />
+</shape>

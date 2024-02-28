@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AmazonECommerceClone</string>
+    <string name="privacy_notice_text"><a href="#">Conditions of Use Privacy Notice</a></string>
+    <string name="copyright_text">© 1996-2024, Amazon.com, Inc. or its affiliates</string>
+    <string name="amazon_logo">Amazon Logo</string>
+</resources>

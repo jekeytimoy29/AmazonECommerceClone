@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- gradient_border.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Dark Center -->
+    <item android:drawable="@drawable/dark_center" />
+    <!-- Light Sides -->
+    <item
+        android:left="-12dp"
+        android:right="-12dp"
+        android:drawable="@drawable/light_sides" />
+</layer-list>

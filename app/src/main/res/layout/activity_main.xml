@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background_color">
+
+    <ImageView
+        android:id="@+id/headerImageView"
+        style="@style/ImageHeaderStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        app:srcCompat="@drawable/amazon_logo"
+        android:contentDescription="@string/amazon_logo"/>
+
+    <View
+        android:id="@+id/headerBottomBorder"
+        style="@style/BorderStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerImageView" />
+
+    <View
+        android:id="@+id/footerTopBorder"
+        style="@style/FooterBorderStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/footer_layout" />
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        style="@style/BaseFooterStyle"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/privacyNoticeLink"
+            style="@style/HyperLinkTextStyle"
+            android:layout_margin="16dp"
+            android:text="@string/privacy_notice_text" />
+
+        <TextView
+            android:id="@+id/copyrightText"
+            style="@style/CopyrightTextStyle"
+            android:text="@string/copyright_text" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
