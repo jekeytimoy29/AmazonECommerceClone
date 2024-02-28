@@ -3,4 +3,14 @@
     <string name="privacy_notice_text"><a href="#">Conditions of Use Privacy Notice</a></string>
     <string name="copyright_text">© 1996-2024, Amazon.com, Inc. or its affiliates</string>
     <string name="amazon_logo">Amazon Logo</string>
+    <string name="login_info_text">Sign in to <b>Zappos.com</b> using your Amazon account</string>
+    <string name="forgot_password"><a href="#">Forgot Password?</a></string>
+    <string name="sign_in">Sign in</string>
+    <string name="edit_username_text">Email (phone for mobile accounts)</string>
+    <string name="password_text">Amazon password</string>
+    <string name="show_password_text">Show password</string>
+    <string name="keep_me_signed_in">Keep me signed in.</string>
+    <string name="details"><a href="#">Details</a></string>
+    <string name="new_to_amazon">New to Amazon?</string>
+    <string name="create_new_account">Create a new Amazon account</string>
 </resources>
