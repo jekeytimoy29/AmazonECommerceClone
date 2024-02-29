@@ -5,7 +5,7 @@
     <color name="background_color">#F4F4F4</color>
     <color name="header_color">#D0D3D4</color>
     <color name="border_color">#ACABAB</color>
-    <color name="primary_color">#ECCC3A</color>
+    <color name="primary_color">#F7BD3D</color>
     <color name="secondary_color">#C0C2C3</color>
     <color name="hyperLink_color">#3A86EC</color>
 </resources>
