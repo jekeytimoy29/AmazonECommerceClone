@@ -13,4 +13,11 @@
     <string name="details"><a href="#">Details</a></string>
     <string name="new_to_amazon">New to Amazon?</string>
     <string name="create_new_account">Create a new Amazon account</string>
+    <string name="create_account">Create Account</string>
+    <string name="your_name">Your name</string>
+    <string name="continue_text">Continue</string>
+    <string name="mobile_number_or_email">Mobile Number or Email</string>
+    <string name="password">Password</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="shop_by_categories">Shop By Categories</string>
 </resources>

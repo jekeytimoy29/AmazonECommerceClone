@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headerImageView" />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -153,15 +153,15 @@
                 android:id="@+id/signInButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_in"
                 android:layout_below="@id/keepMeSignedIn"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="40dp"
-                android:textSize="18sp"
-                android:textColor="@color/black"
                 android:background="@drawable/primary_button_background"
-                android:textAllCaps="false"/>
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:onClick="signInButtonOnClick"/>
 
             <View
                 android:layout_width="match_parent"
@@ -191,11 +191,12 @@
                 android:textSize="18sp"
                 android:background="@drawable/secondary_button_background"
                 android:textColor="@color/black"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:onClick="createAccountOnClick"/>
 
         </RelativeLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <View
         android:id="@+id/footerTopBorder"
