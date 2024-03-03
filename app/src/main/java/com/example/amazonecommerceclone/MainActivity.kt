@@ -83,6 +83,7 @@ class MainActivity : AppCompatActivity() {
             val jsonString = Gson().toJson(user)
             putExtra("user", jsonString)
         }
+        displayMessage(getString(R.string.user_signin_successfully, user.name))
         startActivity(intent)
     }
 

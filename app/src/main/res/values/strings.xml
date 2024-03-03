@@ -26,6 +26,8 @@
     <string name="password_mismatch_error">Error: Mismatch Passwords.</string>
     <string name="invalid_user_password">Error: Invalid user or password.</string>
     <string name="added_user_successfully">User: \'%1$s\' Added Successfully.</string>
-    <string name="user_signin_successfully">User: \'%1$s\' SignedIn Successfully.</string>
+    <string name="user_signin_successfully">User: \'%1$s\' Signed In Successfully.</string>
     <string name="welcome_text">Welcome %1$s!</string>
+    <string name="category_selected">Category: \'%1$s\' Selected</string>
+    <string name="shopping_category_image">Shopping Category Image</string>
 </resources>
