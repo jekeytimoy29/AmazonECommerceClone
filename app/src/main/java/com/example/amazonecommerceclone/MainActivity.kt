@@ -51,7 +51,38 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun signInButtonOnClick(view: View) {
-        val intent = Intent(this, ShoppingCategoryActivity::class.java)
+        val username = binding.editUsername.text.toString()
+        if (username.isBlank()) {
+            displayMessage(
+                getString(
+                    R.string.field_required_error,
+                    getString(R.string.edit_username_text)
+                )
+            )
+            return
+        }
+
+        val password = binding.editPassword.text.toString()
+        if (password.isBlank()) {
+            displayMessage(
+                getString(
+                    R.string.field_required_error,
+                    getString(R.string.password_text)
+                )
+            )
+            return
+        }
+
+        val user = usersList.find { it.emailOrNumber == username && it.password == password }
+        if (user == null) {
+            displayMessage(getString(R.string.invalid_user_password))
+            return
+        }
+
+        val intent = Intent(this, ShoppingCategoryActivity::class.java).apply {
+            val jsonString = Gson().toJson(user)
+            putExtra("user", jsonString)
+        }
         startActivity(intent)
     }
 
