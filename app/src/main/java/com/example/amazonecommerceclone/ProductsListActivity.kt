@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.amazonecommerceclone.adapter.ProductAdapter
 import com.example.amazonecommerceclone.databinding.ActivityProductsListBinding
@@ -36,13 +37,24 @@ class ProductsListActivity : AppCompatActivity() {
             binding.noProductsText.visibility = View.GONE
             binding.productsListView.visibility = View.VISIBLE
 
-            productAdapter = ProductAdapter(productCategory.productsList) { product ->
-                val intent = Intent(this, ProductDetailsActivity::class.java).apply {
-                    val jsonString = Gson().toJson(product)
-                    putExtra("product", jsonString)
+            productAdapter = ProductAdapter(
+                productCategory.productsList,
+                { product ->
+                    val intent = Intent(this, ProductDetailsActivity::class.java).apply {
+                        val jsonString = Gson().toJson(product)
+                        putExtra("product", jsonString)
+                    }
+                    startActivity(intent)
+                },
+                { product ->
+                    user.cartItemsList?.add(product)
+                    Toast.makeText(
+                        this,
+                        getString(R.string.added_item_in_cart, product.name),
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
-                startActivity(intent)
-            }
+            )
 
             binding.productsListView.layoutManager = LinearLayoutManager(this)
             binding.productsListView.adapter = productAdapter

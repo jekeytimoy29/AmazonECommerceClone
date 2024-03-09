@@ -82,7 +82,26 @@ class ShoppingCategoryActivity : AppCompatActivity() {
                             "13th Gen Intel® Core™ i7",
                         R.drawable.laptop,
                         R.drawable.dell,
-                        1499.99)
+                        1499.99),
+                        Product(
+                            "Dell Keyboard",
+                            "Dell Gaming Keyboard Limited Edition",
+                            R.drawable.keyboard,
+                            R.drawable.dell,
+                            2199.99
+                        ),
+                        Product(
+                            "Dell Mouse",
+                            "Dell Gaming Mouse Limited Edition",
+                            R.drawable.mouse,
+                            R.drawable.dell,
+                            2500.00
+                        ),
+                        Product("JVC Bluetooth Headset",
+                            "Bluetooth Headphones with Hybrid Noise Cancelling",
+                            R.drawable.headset,
+                            R.drawable.jvc,
+                            1499.99)
                     )
                 )
             )

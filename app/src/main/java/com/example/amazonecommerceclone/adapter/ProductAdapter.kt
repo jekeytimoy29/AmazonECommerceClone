@@ -5,10 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.amazonecommerceclone.databinding.ItemProductBinding
 import com.example.amazonecommerceclone.model.Product
+import java.text.NumberFormat
 
 class ProductAdapter(
     private val productsList: List<Product>,
-    private val onProductClick: (Product) -> Unit
+    private val onProductClick: (Product) -> Unit,
+    private val onProductAddClick: (Product) -> Unit
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -39,12 +41,20 @@ class ProductAdapter(
             }
         }
 
-        fun bind(product: Product){
+        fun bind(product: Product) {
             binding.productImage.setImageResource(product.imgSrc)
             binding.brandLogo.setImageResource(product.logoSrc)
             binding.productName.text = product.name
             binding.productDescription.text = product.description
-            binding.productPrice.text = product.price.toString()
+            binding.productPrice.text =
+                NumberFormat.getCurrencyInstance().format(product.price).toString()
+            binding.addButton.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val item = productsList[position]
+                    onProductAddClick(item)
+                }
+            }
         }
     }
 }
