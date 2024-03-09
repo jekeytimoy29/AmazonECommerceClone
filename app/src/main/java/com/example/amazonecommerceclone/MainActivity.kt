@@ -31,10 +31,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        usersList = mutableListOf<User>(
-            User("Jake Desneyk", "snake@fakegmail.com", "snakePWORD@3", null),
-            User("Jakey Snakey", "snakey@fakegmail.com", "snakeyPWORD@3", null),
-            User("Jekey Timoy", "timoy@fakegmail.com", "timoyPWORD@3", null)
+        usersList = mutableListOf(
+            User("Jake Desneyk", "snake@fakegmail.com", "snakePWORD@3", mutableListOf()),
+            User("Jakey Snakey", "snakey@fakegmail.com", "snakeyPWORD@3", mutableListOf()),
+            User("Jekey Timoy", "timoy@fakegmail.com", "timoyPWORD@3", mutableListOf())
         )
 
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -80,8 +80,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val intent = Intent(this, ShoppingCategoryActivity::class.java).apply {
-            val jsonString = Gson().toJson(user)
-            putExtra("user", jsonString)
+            putExtra("user", user)
         }
         displayMessage(getString(R.string.user_signin_successfully, user.name))
         startActivity(intent)
@@ -104,12 +103,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-
-        if (savedInstanceState != null) {
-            val jsonString = savedInstanceState.getString("usersList")
-            val type = object : TypeToken<MutableList<User>>() {}.type
-            usersList = Gson().fromJson(jsonString, type)
-        }
+        val jsonString = savedInstanceState.getString("usersList")
+        val type = object : TypeToken<MutableList<User>>() {}.type
+        usersList = Gson().fromJson(jsonString, type)
     }
 
     private fun displayMessage(text: String) {

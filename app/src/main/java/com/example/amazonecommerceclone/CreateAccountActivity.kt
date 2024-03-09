@@ -2,7 +2,6 @@ package com.example.amazonecommerceclone
 
 import android.app.Activity
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -63,14 +62,14 @@ class CreateAccountActivity : AppCompatActivity() {
             return
         }
 
-        val emailOrNumberExists = usersList.any { it.emailOrNumber.equals(emailOrNumber) }
+        val emailOrNumberExists = usersList.any { it.emailOrNumber == emailOrNumber }
         if (emailOrNumberExists) {
             displayMessage(getString(R.string.email_number_exists_error, emailOrNumber))
             return
         }
 
         // Go back to login page with User data
-        val jsonString = Gson().toJson(User(name, emailOrNumber, password, null))
+        val jsonString = Gson().toJson(User(name, emailOrNumber, password, mutableListOf()))
         val responseIntent = Intent().apply {
             putExtra("user", jsonString)
         }

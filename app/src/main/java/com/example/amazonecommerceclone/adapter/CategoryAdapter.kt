@@ -1,16 +1,14 @@
 package com.example.amazonecommerceclone.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.amazonecommerceclone.databinding.ItemCategoryBinding
-import com.example.amazonecommerceclone.model.ShoppingCategory
+import com.example.amazonecommerceclone.model.ProductCategory
 
 class CategoryAdapter(
-    val context: Context,
-    private val categoryList: List<ShoppingCategory>,
-    private val onCategoryClick: (ShoppingCategory) -> Unit
+    private val categoryList: List<ProductCategory>,
+    private val onCategoryClick: (ProductCategory) -> Unit
 ) :
     RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
@@ -42,7 +40,7 @@ class CategoryAdapter(
             }
         }
 
-        fun bind(category: ShoppingCategory) {
+        fun bind(category: ProductCategory) {
             binding.categoryImage.setImageResource(category.imgSrc)
             binding.categoryName.text = category.name
         }

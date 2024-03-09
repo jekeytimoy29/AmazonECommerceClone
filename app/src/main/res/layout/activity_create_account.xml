@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".CreateAccountActivity">
+    tools:context=".CreateAccountActivity"
+    android:background="@color/background_color">
 
     <ImageView
         android:id="@+id/amazonLogo"

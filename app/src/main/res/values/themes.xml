@@ -4,6 +4,7 @@
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/primary_color</item>
         <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorButtonNormal">@color/secondary_color</item>
         <item name="colorAccent">@color/primary_color</item>
         <item name="android:textColorLink">@color/hyperLink_color</item>
         <item name="backgroundColor">@color/background_color</item>

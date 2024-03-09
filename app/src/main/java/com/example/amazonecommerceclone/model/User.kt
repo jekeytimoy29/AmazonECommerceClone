@@ -4,7 +4,7 @@ import java.io.Serializable
 
 data class User(
     var name: String?,
-    val emailOrNumber: String,
+    var emailOrNumber: String,
     var password: String,
-    var categoriesList: MutableList<ShoppingCategory>?
+    var cartItemsList: MutableList<Product>?
 ) : Serializable

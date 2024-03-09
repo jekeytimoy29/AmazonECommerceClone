@@ -30,4 +30,7 @@
     <string name="welcome_text">Welcome %1$s!</string>
     <string name="category_selected">Category: \'%1$s\' Selected</string>
     <string name="shopping_category_image">Shopping Category Image</string>
+    <string name="no_available_products">No Available Products</string>
+    <string name="add_label">Add</string>
+    <string name="view_cart">View Cart</string>
 </resources>
