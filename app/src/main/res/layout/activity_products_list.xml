@@ -40,5 +40,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textAllCaps="false"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        android:onClick="viewCartOnClick"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

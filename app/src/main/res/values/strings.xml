@@ -35,4 +35,6 @@
     <string name="view_cart">View Cart</string>
     <string name="home">Home</string>
     <string name="added_item_in_cart">Item: \'%1$s\' added to Cart</string>
+    <string name="my_shopping_cart_total">"My Shopping Cart, Total: %1$s"</string>
+    <string name="ok_text">OK</string>
 </resources>

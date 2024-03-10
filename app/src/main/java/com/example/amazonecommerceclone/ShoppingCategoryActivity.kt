@@ -62,7 +62,7 @@ class ShoppingCategoryActivity : AppCompatActivity() {
                             "iPad Pro 11-inch",
                             R.drawable.ipad,
                             R.drawable.apple_icon,
-                            400.00
+                            700.00
                         ),
                         Product(
                             "iPhone",
@@ -88,20 +88,20 @@ class ShoppingCategoryActivity : AppCompatActivity() {
                             "Dell Gaming Keyboard Limited Edition",
                             R.drawable.keyboard,
                             R.drawable.dell,
-                            2199.99
+                            14.99
                         ),
                         Product(
                             "Dell Mouse",
                             "Dell Gaming Mouse Limited Edition",
                             R.drawable.mouse,
                             R.drawable.dell,
-                            2500.00
+                            7.00
                         ),
                         Product("JVC Bluetooth Headset",
                             "Bluetooth Headphones with Hybrid Noise Cancelling",
                             R.drawable.headset,
                             R.drawable.jvc,
-                            1499.99)
+                            299.99)
                     )
                 )
             )

@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.amazonecommerceclone.adapter.ProductAdapter
 import com.example.amazonecommerceclone.databinding.ActivityProductsListBinding
 import com.example.amazonecommerceclone.model.ProductCategory
 import com.example.amazonecommerceclone.model.User
 import com.google.gson.Gson
+import java.text.NumberFormat
 
 class ProductsListActivity : AppCompatActivity() {
     private lateinit var user: User
@@ -76,5 +78,32 @@ class ProductsListActivity : AppCompatActivity() {
             this.getSerializableExtra(identifierParameter) as T?
         }
 
+    }
+
+    fun viewCartOnClick(view: View) {
+        val total = user.cartItemsList?.sumOf { it.price }
+        val cartItems: Array<String> = user.cartItemsList?.map {
+            "${it.name}: ${
+                NumberFormat.getCurrencyInstance().format(it.price)
+            }"
+        }!!.toTypedArray()
+
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder
+            .setTitle(
+                getString(
+                    R.string.my_shopping_cart_total,
+                    NumberFormat.getCurrencyInstance().format(total).toString()
+                )
+            )
+            .setPositiveButton(getString(R.string.ok_text)) { dialog, which ->
+                // Do something.
+            }
+            .setItems(cartItems) { dialog, which ->
+                // Do something on item tapped.
+            }
+
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }
