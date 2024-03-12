@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     android:padding="14dp"
-    tools:context=".ProductsListActivity"
-    android:background="@color/background_color">
+    tools:context=".ProductsListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productsListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="714dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/no_available_products"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/viewCartButton"
@@ -34,12 +34,12 @@
         android:id="@+id/viewCartButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/view_cart"
         android:background="@drawable/primary_button_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="viewCartOnClick"
+        android:text="@string/view_cart"
         android:textAllCaps="false"
         android:textSize="18sp"
-        android:onClick="viewCartOnClick"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
