@@ -28,6 +28,7 @@ A clone application for practice of the Amazon E-Commerce Mobile App developed u
 <div>
   <img src="https://github.com/jekeytimoy29/AmazonECommerceClone/blob/master/screenshots/add_to_cart.png" height="600" width="300" />
   <img src="https://github.com/jekeytimoy29/AmazonECommerceClone/blob/master/screenshots/view_cart.png" height="600" width="300" />
+  <img src="https://github.com/jekeytimoy29/AmazonECommerceClone/blob/master/screenshots/empty_products_list.png" height="600" width="300" />
 </div>
 
 ## Product Details Screen
